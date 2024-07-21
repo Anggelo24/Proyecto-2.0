@@ -1,0 +1,29 @@
+<div>
+      <Navbar tipoDeUsuario={usuario.tipoUsu} />
+      <div className="main-container">
+        <div className="container">
+          <div className="titulos">
+            <h1 className="titulo1">Panel de Admin</h1>
+            <Link to="/inicio" className="atras">
+              Volver a inicio
+            </Link>
+          </div>
+          <div className="titulo-button-container">
+            <h1 className="titulo2">Lista de Usuarios</h1>
+            <Link to="/CrearNuevoUsuario">
+              <button className="boton" type="submit">
+                Crear nuevo
+              </button>
+            </Link>
+            <div className="buscar-container">
+              <BarraBusqueda />
+            </div>
+          </div>
+          {filteredUsuarios.map((u) => (
+            <ListaUsuario key={u.id} usuario={u} />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};

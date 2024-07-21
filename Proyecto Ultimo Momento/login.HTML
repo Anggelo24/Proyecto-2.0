@@ -1,0 +1,30 @@
+<div className="main-container">
+      <div className="left-container">
+        <div className="container">
+          <img src="/logoPTY.png" alt="Logo" className="logo" />
+          <h2>Iniciar Sesión</h2>
+          <Form method="post">
+            <div className="form-group">
+              <label>
+                Usuario:
+                <input type="text" name="username" required />
+              </label>
+            </div>
+            <div className="form-group">
+              <label>
+                Contraseña:
+                <input type="password" name="password" required />
+              </label>
+            </div>
+            <button type="submit">Entrar</button>
+          </Form>
+          <div className="account-link">
+            <h4 className="cuenta">No tienes cuenta?</h4>
+            <Link to="/register" className="link">
+              Crea una nueva
+            </Link>
+          </div>
+        </div>
+      </div>
+      <div className="right-container"></div>
+    </div>

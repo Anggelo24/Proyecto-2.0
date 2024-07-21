@@ -1,0 +1,15 @@
+<div className="user-card">
+      <img src="fotoUsPlaceholder.jpg" alt="Avatar" className="user-avatar1" />
+      <div className="user-info1">
+        <span className="user-name1">{usuario.nombre}</span>
+      </div>
+      <div className="user-actions">
+        <Link to={`/editar_Usuario/${usuario.id}`}>
+          <button className="edit-button">Editar</button>
+        </Link>
+        <Form method="post" action="/administracion">
+          <input type="hidden" name="usuarioId" value={usuario.id} />
+          <button className="delete-button" type="submit">Eliminar</button>
+        </Form>
+      </div>
+    </div>

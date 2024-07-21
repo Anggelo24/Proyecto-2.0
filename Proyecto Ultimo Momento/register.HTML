@@ -1,0 +1,54 @@
+ <div className="main-container">
+      <div className="left-container">
+        <div className="container">
+          <img src="/logoPTY.png" alt="Logo" className="logo" />
+          <h1 className="titulo1">Crear una nueva cuenta</h1>
+          <Form method="post">
+            <div className="form-group">
+              <label>
+                Usuario:
+                <input type="text" name="username" required />
+              </label>
+              {actionData?.errors?.username && (
+                <div style={{ color: "red" }}>{actionData.errors.username}</div>
+              )}
+            </div>
+            <div className="form-group">
+              <label>
+                Correo Electronico:
+                <input type="email" name="correo" required />
+              </label>
+              {actionData?.errors?.correo && (
+                <div style={{ color: "red" }}>{actionData.errors.correo}</div>
+              )}
+            </div>
+            <div className="form-group">
+              <label>
+                Contraseña:
+                <input type="password" name="password" required />
+              </label>
+              {actionData?.errors?.password && (
+                <div style={{ color: "red" }}>{actionData.errors.password}</div>
+              )}
+            </div>
+            <div className="form-group">
+              <label>
+                Confirmar Contraseña:
+                <input type="password" name="confirmPassword" required />
+              </label>
+              {actionData?.errors?.confirmPassword && (
+                <div style={{ color: "red" }}>{actionData.errors.confirmPassword}</div>
+              )}
+            </div>
+            <button type="submit">Crear Usuario</button>
+          </Form>
+          <div className="account-link">
+            <h4 className="cuenta">Ya tienes cuenta?</h4>
+            <Link to="/login" className="link">
+              Inicia Sesion!
+            </Link>
+          </div>
+        </div>
+      </div>
+      <div className="right-container"></div>
+    </div>

@@ -1,0 +1,22 @@
+<div>
+      <Navbar tipoDeUsuario={usuario.tipoUsu}/>
+      <div className="main-container">
+        <div className="container">
+          <div className="titulos">
+            <h1 className="titulo1">Puntaje Obtenido</h1>
+            <Link to="/inicio" className="atras">
+              Volver a los temas
+            </Link>
+          </div>
+        </div>
+      </div>
+      <Puntajes />
+      <div className="titulo-button-container">
+        <Link to="/your-target-route" className="botonComenzar">
+          Repetir Juego
+        </Link>
+        <Link to="/inicio" className="botonComenzar1">
+          Continuar
+        </Link>
+      </div>
+    </div>

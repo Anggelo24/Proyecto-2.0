@@ -1,0 +1,54 @@
+<div>
+        <Navbar />
+        <div className="main-container">
+          <div className="container">
+            <div className="titulos">
+              <h1 className="titulo1">Sitios Históricos</h1>
+              <Link to="/inicio" className="atras">
+                Volver a los temas
+              </Link>
+            </div>
+            <div className="mensaje-error">
+              <p>El tema no se encontró.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div>
+      <Navbar />
+      <div className="main-container">
+        <div className="container">
+          <div className="titulos">
+            <h1 className="titulo1">{tema.titulo}</h1>
+            <Link to="/inicio" className="atras">
+              Volver a los temas
+            </Link>
+          </div>
+          <div className="video-container">
+            <video controls className="video">
+              <source src={tema.video} type="video/mp4" />
+              <track
+                kind="captions"
+                srcLang="es"
+                src="/captions.vtt"
+                label="Español"
+                default
+              />
+              Tu navegador no soporta el elemento de video.
+            </video>
+          </div>
+          <div className="descripcion">
+            <p>{tema.descripcion}</p>
+          </div>
+          <div className="titulo-button-container">
+            <button className="botonComenzar" type="button">
+              Comenzar Juego
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
